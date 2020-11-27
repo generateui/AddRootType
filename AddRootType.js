@@ -1,23 +1,26 @@
+#!/usr/bin/env node
+
 var fs = require('fs');
 // arg0: node
 // arg1: this filename
-console.log(process.argv);
-var args = process.argv;
-if (args.length == 2) {
+const [,, ...args] = process.argv;
+
+if (args.length == 0) {
     console.log("adds given type to json schema file");
     console.log("\t--type|-t: object|array");
     console.log("\t--typeName|-tn: name of the type");
     console.log("\t--file|-f filepath to the json schema file");
+	return;
 }
-if (args.length != 8) {
-    throw new Error("expected 8 arguments");
+if (args.length != 6) {
+    throw new Error("expected 6 arguments");
 }
 
 // parse the commandline options
 var type = "";
 var typeName = "";
 var filePath = "";
-for (var i = 2; i < 8; i++) {
+for (var i = 0; i < 6; i++) {
     const arg = args[i];
     const nextArg = args[i + 1];
     console.log(typeof arg);
