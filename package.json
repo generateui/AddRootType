@@ -1,0 +1,11 @@
+{
+  "name": "AddRootType",
+  "version": "1.0.0",
+  "description": "add a root type to a json schema file for use with quicktype inferred schemas",
+  "main": "AddRootType.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Ruud Poutsma",
+  "license": "MIT"
+}
